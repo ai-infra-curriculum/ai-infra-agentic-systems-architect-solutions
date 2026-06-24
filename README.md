@@ -26,11 +26,11 @@ At this altitude the deliverable is a **design**, not a service. So the solution
   placement, MCP/A2A integration specs, fleet deployment and recovery designs
 - 🛡️ **Threat models & security specs** — prompt-injection threat models, guardrail
   placement, least-privilege tool permissions, OAuth/RBAC scoping, sandboxing
-- 📋 **Governance artifacts** — ISO/IEC 42001 control mappings, plugin-lifecycle
-  governance, FERPA/COPPA regulated-domain constraints, accountability specs
+- 📋 **Governance artifacts** — horizontal-framework control mappings (ISO/IEC 42001,
+  NIST AI RMF, EU AI Act), multi-regime regulated-domain designs, accountability specs
 - 💻 **Code where it earns its place** — runnable evaluation harnesses (mod-304),
-  OTel GenAI span instrumentation (mod-305), and Claude Code plugin/SDLC config
-  (mod-310) ship real, verified code rather than prose
+  OTel GenAI span instrumentation (mod-305), and platform extension/config examples
+  across multiple agentic platforms (mod-310) ship real, verified artifacts rather than prose
 
 Each exercise solution is a self-contained walkthrough: the approach, the worked
 artifact, the acceptance-criteria mapping, the failure modes named, and the
@@ -53,7 +53,7 @@ ai-infra-agentic-systems-architect-solutions/
 ├── projects/
 │   ├── project-301-production-agentic-reference-architecture/
 │   ├── project-302-regulated-domain-agent-architecture/
-│   └── project-303-agentic-sdlc-platform/
+│   └── project-303-extensible-agent-platform/
 ├── SOLUTIONS_INDEX.md                             # inventory + completion map
 └── README.md                                      # this file
 ```
@@ -73,8 +73,8 @@ directory holds a single `README.md` — the worked solution for that exercise.
 | [mod-306 — Guardrails, Safety & Security](./modules/mod-306-guardrails-safety-security/) | 6 exercises: guardrail placement, prompt-injection threat model, least-privilege tool permissions, OAuth/RBAC token management, CLI agent sandboxing, excessive-agency controls |
 | [mod-307 — Cost & Latency Architecture](./modules/mod-307-cost-latency-architecture/) | 3 exercises: token-economics cost model, caching & routing architecture, cost/latency/quality budgets |
 | [mod-308 — Deployment & Durable Execution](./modules/mod-308-deployment-durable-execution/) | 4 exercises: durable-execution design, HITL approval architecture, agent-fleet deployment, failure recovery & resumption |
-| [mod-309 — Governance, Compliance & Domain](./modules/mod-309-governance-compliance-domain/) | 5 exercises: ISO/IEC 42001 controls mapping, plugin-lifecycle governance, FERPA/COPPA regulated-domain architecture, K-12 EdTech constraints, governance & accountability spec |
-| [mod-310 — Agentic Developer Platforms](./modules/mod-310-agentic-developer-platforms/) | 5 exercises (real config/code): plugin architecture (Agents/Skills/Hooks/MCP), AI-for-SDLC tool-use patterns, context hydration, DevOps toolchain integration, developer tooling adoption & DX |
+| [mod-309 — Governance, Compliance & Regulated-Domain Architecture](./modules/mod-309-governance-compliance-domain/) | 5 exercises: horizontal-framework controls mapping (ISO 42001 / NIST AI RMF), multi-regime regulated-domain architecture (healthcare/finance/public-sector/edtech as peers), extension & tool governance lifecycle, governance & accountability spec, data-handling & residency design |
+| [mod-310 — Agentic Developer & Internal Platforms](./modules/mod-310-agentic-developer-platforms/) | 5 exercises (real config across multiple platforms): extension-model mapping across platforms (Agents/Skills/Hooks/MCP), secure tool-use & context hydration, workflow-toolchain integration, platform adoption & DX, non-SDLC platform case |
 
 **Totals:** 10 modules · 42 exercise solutions · 3 capstone projects.
 
@@ -82,7 +82,7 @@ The three capstone projects under [`projects/`](./projects/) integrate the modul
 into end-to-end design walkthroughs: a
 [production agentic reference architecture](./projects/project-301-production-agentic-reference-architecture/),
 a [regulated-domain agent architecture](./projects/project-302-regulated-domain-agent-architecture/),
-and an [agentic SDLC platform](./projects/project-303-agentic-sdlc-platform/).
+and an [extensible agent platform](./projects/project-303-extensible-agent-platform/).
 
 ## 📖 How to Use This Repository
 
@@ -97,7 +97,8 @@ These are reference answers — get the most from them by trying the exercise fi
 4. **Read the failure modes and acceptance-criteria mapping.** Each solution names the
    common mistakes a grader sees and ties the artifact back to the exercise's criteria.
 5. **For mod-304, mod-305, and mod-310**, the solutions include runnable harnesses,
-   OTel instrumentation, and real Claude Code config — run and adapt them.
+   OTel instrumentation, and platform extension/config examples across multiple agentic
+   platforms — run and adapt them.
 6. **Work the capstone projects** once the module solutions click, to see the pieces
    compose into a single architecture.
 
